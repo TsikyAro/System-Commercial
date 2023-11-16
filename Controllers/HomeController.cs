@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using System_Commercial.Models;
 using Systeme_Commerciale.Models;
 
 namespace Systeme_Commerciale.Controllers;
@@ -43,7 +44,30 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        Connexion c = new Connexion();
+        Unite u = new Unite();
+        Departement dept = new Departement();
+        Produit p = new Produit();
+        Unite [] unites = u.GetDonnee(c);
+        Departement [] departements = dept.GetDonnee(c);
+        Produit [] produits = p.GetDonnee(c);
+        ViewBag.unites = unites;
+        ViewBag.departements = departements;
+        ViewBag.produits = produits;
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult insertionDemande(){
+        Connexion con = new Connexion();
+        int idproduit = int.Parse(Request.Form["produit"].ToString());
+        double quantite = double.Parse(Request.Form["quantite"].ToString());
+        int idDepartement = int.Parse(Request.Form["departement"].ToString());
+        int idUnite = int.Parse(Request.Form["unite"].ToString());
+        DateTime date = DateTime.Now;
+        Demande demande = new Demande(idproduit,quantite,idUnite,idDepartement,date);
+        demande.Insert(con);
+        return View("Index");
     }
 
     public IActionResult Privacy()

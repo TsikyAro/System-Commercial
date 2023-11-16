@@ -3679,11 +3679,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ITU\\s5\\Mr Tovo\\Systeme_Commerciale\\Systeme_Commerciale.csproj",
+      "projectUniqueName": "D:\\ITU\\s5\\Mr Tovo\\System-Commercial\\Systeme_Commerciale.csproj",
       "projectName": "Systeme_Commerciale",
-      "projectPath": "D:\\ITU\\s5\\Mr Tovo\\Systeme_Commerciale\\Systeme_Commerciale.csproj",
+      "projectPath": "D:\\ITU\\s5\\Mr Tovo\\System-Commercial\\Systeme_Commerciale.csproj",
       "packagesPath": "C:\\Users\\Tsiky Aro\\.nuget\\packages\\",
-      "outputPath": "D:\\ITU\\s5\\Mr Tovo\\Systeme_Commerciale\\obj\\",
+      "outputPath": "D:\\ITU\\s5\\Mr Tovo\\System-Commercial\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tsiky Aro\\AppData\\Roaming\\NuGet\\NuGet.Config"

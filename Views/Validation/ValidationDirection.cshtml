@@ -1,0 +1,108 @@
+@{
+    ViewData["Title"] = "Validation Direction";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side-by-Side Tables</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .tables-container {
+            display: flex;
+            justify-content: space-between;
+            width: 95%;
+        }
+
+        table {
+            width: 18%; /* Adjusted to leave space between tables */
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .table-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .bouton{
+            padding: 15px;
+            background-color: #4caf50;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            border-radius:5px;
+        }
+        .bouton:hover{
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Besoin d'Achat de tous les Departements </h2>
+
+    <div class="tables-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Article</th>
+                    <th>Quantite</th>
+                    <th>Unite</th>
+                    <th>Date Demande</th>
+                    <th>Departement</th>
+                    <th>Validation</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i <ViewBag.besoins.Length; i++) {
+                 @if(ViewBag.besoins[i].Etat>=1){
+                    <tr>
+                        <td> @ViewBag.besoins[i].NomProduit</td>
+                        <td> @ViewBag.besoins[i].Quantite</td>
+                        <td> @ViewBag.besoins[i].NomUnite</td>
+                        <td> @ViewBag.besoins[i].DateDemande</td>
+                        <td> @ViewBag.besoins[i].NomDepartement</td>
+                        @if(ViewBag.besoins[i].Etat==1){
+                            <td><a href="validerDirection?idDemande=@ViewBag.besoins[i].IdDemande">Valider</a></td>
+                        }else{
+                            <td></td>
+                        }
+                    </tr>
+
+                 }   
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

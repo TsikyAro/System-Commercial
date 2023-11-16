@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OnoJsjSA+5/Rp57cw8Sq1BWpctHorCq1VUBIxofLx3AHGdRQyINCGkofnC2H/wQsUcQBMLcYprAswnfT3U8HbQ==",
+  "dgSpecHash": "Zm+dNCWwPogYnRWL78HSDbCLJupl5MUWUuDs+5YIbauifsfolQU8bOX+5RVZidxFRLNWKyfe61q4DKsU1L+u1w==",
   "success": true,
-  "projectFilePath": "D:\\ITU\\s5\\Mr Tovo\\Systeme_Commerciale\\Systeme_Commerciale.csproj",
+  "projectFilePath": "D:\\ITU\\s5\\Mr Tovo\\System-Commercial\\Systeme_Commerciale.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tsiky Aro\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Tsiky Aro\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

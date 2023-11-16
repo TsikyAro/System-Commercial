@@ -24,4 +24,9 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "Validation",
+    pattern: "Validation/besoin/{iddepartement}",
+    defaults: new { controller = "Validation", action = "besoin" });
+   
 app.Run();

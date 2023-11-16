@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .order-summary {
+            border: 1px solid #ddd;
+            padding: 10px;
+            max-width: 600px;
+            margin: auto;
+            background-color: #f9f9f9;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .lien {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            float: right;
+            text-decoration: none;
+        }
+
+        .lien:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="order-summary">
+        <h2>Demande de Proformat - Tableau de Commande</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Produit</th>
+                    <th>Quantité</th>
+                    <th>Unité</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for (int i = 0; i <ViewBag.besoins.Length; i++) {
+                <tr>
+                    <td>@ViewBag.besoins[i].NomProduit</td>
+                    <td>@ViewBag.besoins[i].Quantite</td>
+                    <td>@ViewBag.besoins[i].NomUnite</td>
+                </tr>
+            }    
+            </tbody>
+        </table>
+
+       <a href="exportExel" style="lien"> Exporter Exel</a>
+    </div>
+
+</body>
+</html>
