@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importation de fichier</title>
+</head>
+<body>
+
+    <h1>Formulaire d'Importation de Fichier</h1>
+
+    <form action="Home/upload" method="post" enctype="multipart/form-data">
+        <label for="fileInput">Sélectionner un fichier Excel :</label>
+        <input type="file" id="fileInput" name="file" accept=".xlsx, .xls">
+
+        <br>
+
+        <button type="submit">Importer</button>
+    </form>
+
+</body>
+</html>
